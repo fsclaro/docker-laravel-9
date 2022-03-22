@@ -21,11 +21,12 @@ Copie os arquivos de configuração para dentro do seu projeto
 ```sh
 cd docker-laravel-9
 ./install.sh seu-projeto
+
+Exemplo: ./install.sh  ../projeto-x
 ```
-*Exemplo: ./install.sh ../projeto-x*
 
 
-Copie o arquivo .env.example para dentro da pasta do seu projeto
+Copie o arquivo .env.example para .env
 ```sh
 cd seu-projeto
 cp .env.example .env
@@ -34,7 +35,7 @@ cp .env.example .env
 Edite o arquivo .env e atualize as variáveis de ambiente
 ```dosini
 APP_NAME="NOME DO SEU PROJETO"
-APP_URL=http://localhost:8000
+APP_URL=http://localhost:8080
 
 DB_CONNECTION=mysql
 DB_HOST=mysql
@@ -54,46 +55,45 @@ REDIS_PORT=6379
 
 ## Scripts
 
-Subir os containers do projeto
+1) Subir os containers do projeto
 ```sh
 ./scripts/up.sh
 ```
 
-Derrubar os containers
+2) Derrubar os containers
+```sh
 ./scripts/down.sh
+```
 
-Acessar o container do aplicativo
+3) Acessar o container do aplicativo
 ```sh
 ./scripts/bash.sh
 ```
 
-Executar um comando do artisan
+4) Executar um comando do artisan
 ```sh
 ./scripts/artisan.sh <parâmetros>
 ```
 
-Executar um comando do composer
+5) Executar um comando do composer
 ```sh
 ./scripts/composer.sh <parâmetros>
 ```
 
-Acessar o banco de dados mysql
+6) Acessar o banco de dados mysql
 ```sh
 ./scripts/mysql.sh
 ```
 
-
-Instalar as dependências do projeto
+7) Instalar as dependências do projeto
 ```sh
 ./scripts/composer.sh install
 ```
 
-
-Gerar a key do projeto Laravel
+8) Gerar a key do projeto Laravel
 ```sh
 /scripts/artisan.sh key:generate
 ```
 
-
-Acessar o projeto pelo navegador
+9) Acessar o projeto pelo navegador
 [http://localhost:8080](http://localhost:8080)
